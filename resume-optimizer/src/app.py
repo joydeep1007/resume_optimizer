@@ -10,8 +10,9 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
 ALLOWED_EXTENSIONS = {'pdf', 'doc', 'docx'}
 
-# Create uploads directory if it doesn't exist
+# Create uploads and analysis_results directories if they don't exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'analysis_results'), exist_ok=True)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

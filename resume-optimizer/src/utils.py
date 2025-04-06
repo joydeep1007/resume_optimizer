@@ -64,7 +64,7 @@ def save_analysis_results(data: Dict[str, Any], filename: str = None) -> str:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"analysis_results_{timestamp}.json"
     
-    output_dir = "analysis_results"
+    output_dir = os.path.join("uploads", "analysis_results")
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, filename)
     

@@ -61,9 +61,17 @@ input[type="file"] {
 .file-upload {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 400px;
+}
+
+.file-upload .file-limit {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    align-self: flex-start;
 }
 
 .file-upload .remove-file {
