@@ -31,7 +31,7 @@ resume-optimizer
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/joydeep1007/resume_optimizer.git
    cd resume-optimizer
    ```
 
