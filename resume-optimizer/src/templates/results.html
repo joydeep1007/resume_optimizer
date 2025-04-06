@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="results-container">
+    <div class="score-section">
+        <h2>Resume Score</h2>
+        <div class="score-circle">
+            <span class="score">{{ results.score }}%</span>
+        </div>
+    </div>
+
+    {% if results.strengths %}
+    <div class="strengths-section">
+        <h3>Strengths</h3>
+        <ul class="strength-list">
+            {% for strength in results.strengths %}
+            <li>{{ strength }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if results.improvements %}
+    <div class="improvements-section">
+        <h3>Suggested Improvements</h3>
+        <ul class="improvement-list">
+            {% for improvement in results.improvements %}
+            <li>{{ improvement }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if results.missing_elements %}
+    <div class="missing-section">
+        <h3>Missing Elements</h3>
+        <ul class="missing-list">
+            {% for element in results.missing_elements %}
+            <li>{{ element }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
