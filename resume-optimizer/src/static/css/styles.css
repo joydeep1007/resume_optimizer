@@ -160,3 +160,134 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Enhanced Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Modern Card Design */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Loading Animation */
+.loading {
+    position: relative;
+    height: 60px;
+}
+
+.loading::after {
+    content: "";
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    border: 3px solid transparent;
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: loading-spinner 0.8s ease infinite;
+}
+
+@keyframes loading-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modern Form Elements */
+.file-upload {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+    transform: scale(1.02);
+}
+
+input[type="file"] {
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: var(--accent-color);
+}
+
+/* Results Section Enhancement */
+#results {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#results.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+#suggestions {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.score-section {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.score-section h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Modern List Styling */
+.strengths, .improvements, .missing {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.strengths ul, .improvements ul, .missing ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.strengths li, .improvements li, .missing li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.strengths li:hover, .improvements li:hover, .missing li:hover {
+    transform: translateX(5px);
+}
